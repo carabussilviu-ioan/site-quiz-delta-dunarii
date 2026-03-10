@@ -1,4 +1,4 @@
-🦢 Delta Dunării - Explorare și Quiz Interactive
+🦢 Delta Dunării - Explorare și Quiz Interactiv
 
 Acesta este un proiect web educațional care prezintă frumusețea Deltei Dunării și oferă utilizatorilor o modalitate distractivă de a-și testa cunoștințele printr-un quiz interactiv.
 
