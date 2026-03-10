@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delta Dunării - Acasă</title>
+    <link rel="stylesheet" href="still.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-image: url('imagini/imag2.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+            color: #fff; 
+            margin: 0; 
+            padding: 0; 
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.5); 
+            padding: 20px; 
+            text-align: center; 
+        }
+
+        header h1 {
+    font-size: 24px;
+}
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0; 
+            text-align: center; 
+        }
+
+        nav ul li {
+            display: inline; 
+            margin-bottom: 10px;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px; 
+            border-radius: 5px; 
+            background-color: rgba(255, 255, 255, 0.3); 
+            transition: background-color 0.3s ease; 
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.5); 
+        }
+
+        section {
+            padding: 20px;
+            text-align: justify; 
+            overflow: hidden; 
+            position: relative; 
+            opacity: 0; 
+            transition: opacity 1s ease; 
+            transform: translateY(20px); 
+            background-color: rgba(0, 0, 0, 0.5); 
+            border-radius: 10px; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+            margin: 20px auto;
+            max-width: 600px;
+        }
+
+        section h2 {
+            margin-bottom: 20px; 
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.5); 
+            color: #fff; 
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        img {
+            width: 100%; 
+            display: block; 
+            margin: auto; 
+            border-radius: 10px; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+            opacity: 0.7; 
+            transition: opacity 0.5s ease; 
+
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <h1>Delta Dunării - Bijuteria Naturii Romanesti</h1>
+        <span class="nume-autor">Cărăbuș Silviu-Ioan - Proiect Delta Dunarii</span>
+        <nav>
+            <ul>
+                <li><a href="index.html">Acasă</a></li>
+                <li><a href="Despre.html">Despre</a></li>
+                <li><a href="Atractii.html">Atracții</a></li>
+                <li><a href="Galerie.html">Galerie Foto</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="welcome-section">
+        <h2>Bine ați venit în Delta Dunării!</h2>
+        <p>Delta Dunării este una dintre cele mai frumoase și fascinante zone naturale din Europa. Situată în România, la vărsarea fluviului Dunărea în Marea Neagră, acest ecosistem unic este recunoscut pentru biodiversitatea sa extraordinară și pentru peisajele spectaculoase. Delta Dunării este locul de reședință pentru peste 300 de specii de păsări, numeroase specii de plante și animale rare. Este de asemenea un paradis pentru pasionații de natură și observatori de păsări, oferind oportunități unice pentru explorare și aventură. Pe acest site veți găsi informații detaliate despre fauna și flora deltei, atracțiile turistice, cum ar fi observarea păsărilor, plimbările cu barca, excursiile în rezervații naturale și multe altele. Vă invităm să descoperiți frumusețea și bogăția acestei zone extraordinare.</p>
+    </section>
+
+    <section id="login-section">
+        <h2>Autentificare</h2>
+        <form id="login-form">
+            <div class="form-group">
+                <label for="username">Nume de utilizator:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Parolă:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Autentificare</button>
+        </form>
+    </section>
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const welcomeSection = document.getElementById('welcome-section');
+            welcomeSection.style.opacity = '1';
+        });
+    </script>
+
+</body>
+</html>

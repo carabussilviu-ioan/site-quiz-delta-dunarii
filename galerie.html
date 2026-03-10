@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delta Dunării - Galerie Foto</title>
+    <link rel="stylesheet" href="still.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('imagini/galerie22.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+    font-size: 24px;
+}
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.3);
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+
+        section {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 20px;
+            margin-top: 20px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        section h2 {
+            margin-bottom: 20px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .gallery img {
+            width: 30%;
+            margin: 10px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        .modal-content img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+   
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+      
+        @media only screen and (max-width: 700px) {
+            .modal-content {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Delta Dunării - Bijuteria Naturii Romanesti</h1>
+        <span class="nume-autor">Cărăbuș Silviu-Ioan - Proiect Delta Dunarii</span>
+        <nav>
+            <ul>
+                <li><a href="index.html">Acasă</a></li>
+                <li><a href="Despre.html">Despre</a></li>
+                <li><a href="Atractii.html">Atracții</a></li>
+                <li><a href="Galerie.html">Galerie Foto</a></li>
+                <li><a href="Quiz.html">Quiz</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Galerie Foto</h2>
+        <div class="gallery">
+            <img src="imagini/imag4.jpg" alt="Delta Dunării" onclick="openModal('imagini/imag4.jpg')">
+            <img src="imagini/imag5.jpg" alt="Delta Dunării" onclick="openModal('imagini/imag5.jpg')">
+            <img src="imagini/imag6.jpg" alt="Delta Dunării" onclick="openModal('imagini/imag6.jpg')">
+            <img src="imagini/imag7.jpg" alt="Delta Dunării" onclick="openModal('imagini/imag7.jpg')">
+            <img src="imagini/imag8.jpg" alt="Delta Dunării" onclick="openModal('imagini/imag8.jpg')">
+        </div>
+
+    
+        <div id="myModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modalImg">
+        </div>
+    </section>
+
+    
+    
+
+    <script>
+       
+        function openModal(imageUrl) {
+            document.getElementById('myModal').style.display = 'block';
+            document.getElementById('modalImg').src = imageUrl;
+        }
+
+       
+        function closeModal() {
+            document.getElementById('myModal').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
